@@ -12,7 +12,7 @@ def login():
     elif request.method == 'POST' : #login and go to home page
         email = request.form['email']
         password = request.form['password']
-        #storing users in a json file for now, very bad practice but fine for proof of concept
+        #storing users in a json file for now, bad practice but fine for proof of concept
         with open('./website/users.json', 'r', encoding='utf-8') as json_file:
             users = json.load(json_file)
             for user in users:

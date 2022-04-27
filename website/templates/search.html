@@ -12,6 +12,25 @@
     <div class="header">
         <h1>Results!</h1>
     </div>
-    {{results}}
+    <table>
+        <tr>
+            <th>Price</th>
+            <th>Location</th>
+            <th>Milage</th>
+        </tr>
+            <td>{{cars_found[0]["price"]}}</td>
+            <td>{{cars_found[0]["state"]}}</td>
+            <td>{{cars_found[0]["milage"]}}</td>
+        <tr>
+            <td>{{cars_found[1]["price"]}}</td>
+            <td>{{cars_found[1]["state"]}}</td>
+            <td>{{cars_found[1]["milage"]}}</td>
+        </tr>
+        <tr>
+            <td>{{cars_found[2]["price"]}}</td>
+            <td>{{cars_found[2]["state"]}}</td>
+            <td>{{cars_found[2]["milage"]}}</td>
+        </tr>
+    </table>
 </body>
 </html>

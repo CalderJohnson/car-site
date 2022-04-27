@@ -17,4 +17,8 @@ def main():
 
         data = getCarData(make, model, year)
 
-        return render_template('search.html', results=data["records"][:10])
+        cars_found = [c for c in data['records'][:1000]]
+        cars_found.sort(key=lambda x: x['price'])
+        cars_found = cars_found[:3]
+
+        return render_template('search.html', cars_found=cars_found)
